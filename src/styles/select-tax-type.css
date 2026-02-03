@@ -1,0 +1,85 @@
+/* ===== BACKGROUND ===== */
+.tax-bg {
+  min-height: 100vh;
+  background: url("../assets/maharashtra-hero.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+.tax-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.tax-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+}
+
+/* ===== CARD LAYOUT ===== */
+.tax-card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tax-card {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tax-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.tax-card h5 {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tax-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ===== BUTTON ===== */
+.tax-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tax-btn.blue {
+  background: #1976d2;
+}
+
+.tax-btn.green {
+  background: #2e7d32;
+}
+
+.tax-btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .tax-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}

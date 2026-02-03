@@ -1,0 +1,82 @@
+/* ===== Background ===== */
+.admin-compl-bg {
+  min-height: calc(100vh - 120px);
+  background-image: url("../assets/maharashtra-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.admin-compl-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* ===== Wrapper ===== */
+.admin-compl-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 60px 0;
+}
+
+/* ===== Premium Card ===== */
+.admin-compl-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 16px;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+/* ===== Title ===== */
+.admin-compl-title {
+  background: linear-gradient(90deg, #fff3cd, #f8f9fa);
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* ===== Body ===== */
+.admin-compl-body {
+  padding: 24px;
+}
+
+/* ===== Table ===== */
+.admin-compl-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-compl-table th {
+  background: #e9ecef;
+  border: 1px solid #ced4da;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.admin-compl-table td {
+  border: 1px solid #ced4da;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .admin-compl-card {
+    margin: 0 10px;
+  }
+
+  .admin-compl-title {
+    font-size: 18px;
+  }
+}

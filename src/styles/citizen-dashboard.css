@@ -1,0 +1,167 @@
+/* ===== RESET ===== */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+
+/* ===== BACKGROUND ===== */
+.dashboard-bg {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../assets/maharashtra-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.dashboard-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(3px);
+  z-index: 0;
+}
+.dashboard-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== BANNER ===== */
+.gov-banner {
+  background: linear-gradient(120deg,#e65100,#ffffff,#1b5e20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+.banner-gandhi { height: 120px; }
+.banner-swachh { height: 95px; }
+.banner-center { text-align: center; }
+.banner-center h1 { margin: 0; font-weight: 700; }
+.banner-center h4 { margin: 6px 0; }
+.banner-center p { margin: 0; font-size: 14px; }
+
+/* ===== NOTIFICATION ===== */
+.notification-bar {
+  background: linear-gradient(to right,#ff9800,#f44336);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.notification-text {
+  display: inline-block;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: 500;
+  animation: moveNotice 18s linear infinite;
+}
+@keyframes moveNotice {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* ===== LAYOUT ===== */
+.layout { display: flex; flex: 1; }
+
+/* ===== SIDEBAR ===== */
+.gov-sidebar {
+  width: 260px;
+  background: linear-gradient(180deg,#f8f9fa,#ffffff);
+  padding: 20px;
+  border-right: 4px solid #ff9933;
+  display: flex;
+  flex-direction: column;
+}
+.gov-sidebar h5 { margin-bottom: 15px; font-weight: 600; }
+.gov-sidebar button {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  text-align: left;
+  cursor: pointer;
+  transition: .2s;
+}
+.gov-sidebar button:hover { background: #e9ecef; padding-left: 16px; }
+
+.side-info {
+  margin-top: 16px;
+  font-size: 13px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.sidebar-footer { margin-top: auto; }
+
+/* 🔴 LOGOUT FORCE RED */
+.gov-sidebar .logout-btn {
+  background-color: #d32f2f !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+.gov-sidebar .logout-btn:hover {
+  background-color: #b71c1c !important;
+}
+
+/* ===== MAIN ===== */
+.main-area { flex: 1; padding: 30px; }
+
+/* ===== SERVICES GRID ===== */
+/* 🔥 SIMPLE GRID = 2 ROWS × 3 CARDS */
+.services-grid.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+/* ===== CARD ===== */
+.rectangular-card {
+  height: 260px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-icon { font-size: 34px; }
+.card-btn {
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #fff;
+}
+.btn-blue{background:#1976d2;}
+.btn-green{background:#2e7d32;}
+.btn-purple{background:#6a1b9a;}
+.btn-orange{background:#ef6c00;}
+.btn-yellow{background:#f9a825;color:#000;}
+
+/* ===== FOOTER ===== */
+.gov-footer {
+  background:#212121;
+  color:#ccc;
+  text-align:center;
+  padding:18px;
+  font-size:13px;
+}
+.gov-footer a{color:#90caf9;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .layout{flex-direction:column;}
+  .gov-sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:4px solid #ff9933;
+  }
+  .services-grid.custom-grid{
+    grid-template-columns:1fr;
+  }
+  .rectangular-card{height:auto;}
+}

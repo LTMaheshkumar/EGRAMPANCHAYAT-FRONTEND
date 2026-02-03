@@ -1,0 +1,342 @@
+/* =========================
+   ROOT VARIABLES (Gov Theme)
+========================= */
+:root {
+  --gov-blue: #0d47a1;
+  --gov-light-blue: #e3f2fd;
+  --gov-green: #1b5e20;
+  --gov-saffron: #ff9933;
+  --gov-gray: #f5f7fa;
+  --text-dark: #1f2937;
+  --border-light: #dbe2ea;
+}
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
+.login-page {
+  min-height: 100vh;
+  position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      #e3f2fd 0%,
+      #f8fbff 50%,
+      #ffffff 100%
+    );
+  overflow-x: hidden;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Subtle map watermark */
+.login-background {
+  position: absolute;
+  inset: 0;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Maharashtra_map.svg")
+    no-repeat left center;
+  background-size: 35%;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.login-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+}
+
+/* =========================
+   UTILITY BAR
+========================= */
+.utility-bar {
+  background: var(--gov-blue);
+  color: #fff;
+  font-size: 13px;
+}
+
+.utility-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 6px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.utility-left {
+  display: flex;
+  gap: 20px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  padding: 2px 10px;
+  margin-left: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  background: #fff;
+  color: var(--gov-blue);
+  font-weight: 600;
+}
+
+/* =========================
+   HEADER
+========================= */
+.main-header {
+  background: #ffffff;
+  border-bottom: 3px solid var(--gov-saffron);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.emblem {
+  font-size: 40px;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 22px;
+  color: var(--gov-blue);
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.header-badge {
+  background: var(--gov-green);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.login-main {
+  position: relative;
+  padding: 40px 16px;
+}
+
+.login-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+}
+
+/* =========================
+   LOGIN CARD
+========================= */
+.login-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(13, 71, 161, 0.15);
+  border-top: 6px solid var(--gov-blue);
+}
+
+.card-header h2 {
+  margin: 0;
+  color: var(--gov-blue);
+}
+
+.card-header p {
+  margin: 4px 0 20px;
+  color: #555;
+}
+
+/* Error */
+.error-alert {
+  background: #fdecea;
+  color: #b71c1c;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   LOGIN TYPE TOGGLE
+========================= */
+.login-type-toggle {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #f1f5f9;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.toggle-btn.active {
+  background: var(--gov-blue);
+  color: #fff;
+}
+
+.toggle-btn.admin.active {
+  background: var(--gov-green);
+}
+
+/* =========================
+   FORM
+========================= */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  outline: none;
+}
+
+.input-wrapper input:focus {
+  border-color: var(--gov-blue);
+  box-shadow: 0 0 0 2px rgba(13,71,161,0.15);
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: var(--gov-blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.submit-btn.admin {
+  background: var(--gov-green);
+}
+
+.submit-btn:hover {
+  opacity: 0.95;
+}
+
+/* =========================
+   RIGHT INFO PANELS
+========================= */
+.info-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+  border-left: 5px solid var(--gov-blue);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.info-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--gov-blue);
+}
+
+.notification-list {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+/* Schemes */
+.schemes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.scheme-item {
+  background: var(--gov-light-blue);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Programs */
+.programs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.program-tag {
+  background: #e8f5e9;
+  color: var(--gov-green);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.login-footer {
+  background: #f1f5f9;
+  border-top: 1px solid var(--border-light);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--gov-blue);
+  cursor: pointer;
+  margin-left: 10px;
+}
