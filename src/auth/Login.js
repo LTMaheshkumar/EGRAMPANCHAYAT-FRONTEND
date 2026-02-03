@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "./authService";
-import Footer from "../components/Footer";
+//import Footer from "../components/Footer";
 import "./GovLogin.css";
 
 function Login() {

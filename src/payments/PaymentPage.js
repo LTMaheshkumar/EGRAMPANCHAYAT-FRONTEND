@@ -29,7 +29,7 @@ function PaymentPage() {
     }
 
     try {
-      const res = await api.post("/api/payments", null, {
+      await api.post("/api/payments", null, {
         params: { taxType, method },
       });
       setMessage("Payment successful");
