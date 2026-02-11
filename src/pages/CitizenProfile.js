@@ -49,8 +49,15 @@ function CitizenProfile() {
 
       setTimeout(() => navigate("/dashboard"), 1200);
     } catch (err) {
-      setError("Failed to save profile");
-    }
+  console.log("Profile Error:", err.response);
+
+  if (err.response && err.response.data) {
+    setError(err.response.data.message || "Failed to save profile");
+  } else {
+    setError("Server error. Please try again.");
+  }
+}
+
   };
 
   return (
