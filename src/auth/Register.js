@@ -30,7 +30,18 @@ function Register() {
       setMessage("Registration successful! Please login.");
       setTimeout(() => navigate("/"), 1500);
     } catch (err) {
-      setError(err.response?.data?.message || "Registration failed");
+      console.log("Registration Error:", err.response);
+
+      if (err.response && err.response.data) {
+        // If backend sends proper message
+        if (err.response.data.message) {
+          setError(err.response.data.message);
+        } else {
+          setError("Validation error occurred");
+        }
+      } else {
+        setError("Server not reachable. Please try again.");
+      }
     }
   };
 
